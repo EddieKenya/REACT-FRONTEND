@@ -1,0 +1,12 @@
+.documents {
+  margin-left: 10ch;
+  margin-right: 10ch;
+}
+
+h1 {
+  text-align: center;
+}
+
+AppBar {
+  position: sticky
+}

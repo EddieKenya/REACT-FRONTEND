@@ -1,6 +1,6 @@
 const Footer = () => {
     return ( 
-        <h3>Footer</h3>
+       <h6>date published</h6>
      );
 }
  

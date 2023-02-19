@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import SignIn from "./pages/SignIn";
 import Navbar from "./components/Navbar";
+import LogOut from "./pages/LogOut";
 
 function App() {
  
@@ -15,6 +16,7 @@ function App() {
         <Route path="/signIn" element={<SignIn />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/" element={<HomePage />} />
+        <Route path="/logOut" element={<LogOut />} />
       </Routes>
       <Footer />
     </div>

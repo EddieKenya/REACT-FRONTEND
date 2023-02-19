@@ -14,12 +14,16 @@ const SignIn = (e) => {
     e.preventDefault();
 
     axiosInstance
-      .post("register/", {
+      .post("token/", {
         username: username,
         password: pass,
       })
       .then((res) => {
-        navigate("/signIn");
+        localStorage.setItem('access_token', res.data.access);
+        localStorage.setItem('refresh_token', res.data.refresh);
+        axiosInstance.defaults.headers['Authorization'] = 
+            'JWT ' + localStorage.getItem('access_token');
+        navigate('/')
       });
   };
   return (
@@ -45,13 +49,13 @@ const SignIn = (e) => {
           id="password"
           name="password"
         />
-        <button type="submit">SignUp</button>
+        <button type="submit">SignIn</button>
       </form>
       <br />
       <hr />
       <p>
         {" "}
-        Dont have an account? <Link to="/signUp">SignIn</Link>{" "}
+        Dont have an account? <Link to="/signUp">SignUp</Link>{" "}
       </p>
     </div>
   );
