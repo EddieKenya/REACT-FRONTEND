@@ -2,7 +2,6 @@ import { useState } from "react";
 import axiosInstance from "./axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import "../components/styles/signup.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const SignIn = (e) => {

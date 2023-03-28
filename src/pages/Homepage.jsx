@@ -14,7 +14,7 @@ function PricingContent() {
   const [posts, setPost] = useState(null);
 
   useEffect(()=>{
-    fetch('http://127.0.0.1:8000/api/list/')
+    fetch('https://web-production-4c02.up.railway.app/api/list/')
       .then(res =>{
          return res.json()
       })
