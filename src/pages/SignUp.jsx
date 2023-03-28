@@ -22,7 +22,7 @@ const Signup = (e) => {
         password: pass,
       })
       .then((res) => {
-        navigate('/signIn')
+        navigate('/home')
       
       });
   };
